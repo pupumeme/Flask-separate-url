@@ -5,14 +5,23 @@
     <meta charset="UTF-8">
     <title>控制台</title>
     <link rel= "stylesheet" type= "text/css" 
+<<<<<<< HEAD
       href= "{{ url_for('static',filename='css/ControlUI.css') }}">
+=======
+      href= "{{ url_for('static',filename='css/toggle.css') }}">
+>>>>>>> origin/master
     <script  type= "text/javascript" 
       src= "{{ url_for('static',filename='js/togglePost.js') }}"></script>
 </head>
 <body>
   <div class="ledBlock">
+<<<<<<< HEAD
     {% for i in range(1, 7) %}
       <span>LED{{ i }}</span>
+=======
+    {% for i in range(1, 10) %}
+      LED{{ i }}
+>>>>>>> origin/master
       <label class="switch">
         <input type="checkbox" onclick="clickToggle(value)" name="led" value="LED{{ i }}">
         <span class="slider"></span>
@@ -20,6 +29,7 @@
       <br><br>
     {% endfor %}
   </div>
+<<<<<<< HEAD
   <div class="imageBlock">
     <span>imageBlock</span>
     <form method="post" action="/" enctype="multipart/form-data">
@@ -31,5 +41,7 @@
       <img src="{{ url_for('static', filename= 'photo/'+imgName) }}" width="400" height="400" alt="你的圖片被喵星人劫持了～～"/>
     {% endif %}
   </div>
+=======
+>>>>>>> origin/master
 </body>
 </html>
