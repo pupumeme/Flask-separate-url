@@ -1,9 +1,10 @@
+
 function clickToggle(value){
-  var boxState=document.querySelector("input[value="+value+"]").checked
+  var boxState=document.querySelector("input[value="+value+"]").checked;
   if(boxState) {
-    post_to_url('/infos', {'led': "open "+value});
+    post_to_url('/infos', {'led': "open"+value, 'value': value, 'switch': '1'});
   } else {
-    post_to_url('/infos', {'led': "close "+value});
+    post_to_url('/infos', {'led': "close"+value, 'value': value, 'switch': '0'});
   } 
 } 
 //post  function
