@@ -30,11 +30,12 @@
   </div>
   <div class="imageBlock">
     <span>imageBlock</span>
-    <form method="post" action="/" enctype="multipart/form-data">
+    <form method="post" action="/image" enctype="multipart/form-data">
       <input type="file" size="30" name="photo"/>
       <br>
       <input type="submit" value="提交"/>
     </form>
+    <p>圖片名稱:{{ imgName }}</p>
     {% if imgName != "" %}
       <img src="{{ url_for('static', filename= 'photo/'+imgName) }}" width="400" height="400" alt="你的圖片被喵星人劫持了～～"/>
     {% endif %}
